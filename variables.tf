@@ -24,7 +24,6 @@ variable "enabled" {
 variable "requester_vpc_id" {
   type        = string
   description = "Requester VPC ID"
-  default     = ""
 }
 
 variable "requester_vpc_tags" {
@@ -56,8 +55,7 @@ variable "accepter_peer_tags" {
 
 variable "accepter_vpc_id" {
   type        = string
-  description = "Acceptor VPC ID"
-  default     = ""
+  description = "Accepter VPC ID"
 }
 
 variable "accepter_vpc_tags" {
