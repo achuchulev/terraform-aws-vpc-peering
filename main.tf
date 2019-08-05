@@ -56,7 +56,7 @@ data "aws_route_tables" "accepter" {
   vpc_id   = var.accepter_vpc_id
 }
 
-# Create routes from requestor to acceptor
+# Create routes from requester to accepter
 resource "aws_route" "requester" {
   count = var.enabled == "true" ? 1 : 0
   route_table_id = element(
@@ -73,7 +73,7 @@ resource "aws_route" "requester" {
   ]
 }
 
-# Create routes from acceptor to requestor
+# Create routes from accepter to requester
 resource "aws_route" "accepter" {
   provider = aws.peer
   count    = var.enabled == "true" ? 1 : 0
