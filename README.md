@@ -29,13 +29,13 @@ cd terraform-aws-vpc-peering
 | accepter_region | Accepter AWS region | string  | - | yes
 | requester_vpc_id  | Requester VPC id | string | - | yes
 | accepter_vpc_id  | Accepter VPC id | string | - | yes
-| enabled  | Set to false to prevent the module from creating or accessing any resources | string | yes | no
-| requester_peer_tags  | Requester peer tags | map | yes | no
-| accepter_peer_tags  | Accepter peer tags | map  | yes | no
-| requester_vpc_tags  | Requester VPC tags | map  | yes | no
-| accepter_vpc_tags | Accepter VPC tags  | map  | yes | no
-| requester_route_tables_count | Route tables count of requester's VPC | number | yes | no 
-| requester_route_tables_count | Route tables count of accepter's VPC | number | yes | no 
+| enabled  | Set to false to prevent the module from creating or accessing any resources | string | true | no
+| requester_peer_tags  | Requester peer tags | map | Side = "Requester"   Name = "VPC01-VPC02" | no
+| accepter_peer_tags  | Accepter peer tags | map  | Side = "Accepter"  Name = "VPC01-VPC02" | no
+| requester_vpc_tags  | Requester VPC tags | map  | {} | no
+| accepter_vpc_tags | Accepter VPC tags  | map  | {} | no
+| requester_route_tables_count | Route tables count of requester's VPC | number | 1 | no 
+| requester_route_tables_count | Route tables count of accepter's VPC | number | 1 | no 
 
 ```
 Note: You can use "enabled" variable as a switch to create | destroy peering between VPC on demand. 
