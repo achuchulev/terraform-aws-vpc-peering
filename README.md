@@ -37,6 +37,10 @@ cd terraform-aws-vpc-peering
 | requester_route_tables_count | Route tables count of requester's VPC | number | yes | no 
 | requester_route_tables_count | Route tables count of accepter's VPC | number | yes | no 
 
+```
+Note: You can use "enabled" variable as a switch to create | destroy peering between VPC on demand. 
+```
+
 ### Initialize terraform and plan/apply
 
 ```
