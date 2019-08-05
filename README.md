@@ -52,8 +52,8 @@ terraform apply
 - `Terraform apply` will create:
   - vpc peering connection that represents the requester
   - accepter vpc peering connection
-  - route(s) from requestor to acceptor
-  - route(s) from acceptor to requestor
+  - route(s) from requester to accepter
+  - route(s) from accepter to requester
   
   
 #### Outputs
