@@ -1,3 +1,13 @@
+terraform {
+  required_providers {
+    aws = {
+      source                = "hashicorp/aws"
+      version               = "~> 3.0"
+      configuration_aliases = [aws.peer]
+    }
+  }
+}
+
 provider "aws" {
   region = var.requester_region
 
@@ -14,4 +24,3 @@ provider "aws" {
   access_key = var.accepter_aws_access_key
   secret_key = var.accepter_aws_secret_key
 }
-
